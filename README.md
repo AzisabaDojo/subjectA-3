@@ -15,4 +15,42 @@
 
 > 注意:
 > Paperのプラグインは基本的に "setJoinMessage()" などのSpigotではおなじみのメソッドが非推奨になり、Paper専用のメソッドが用意されています。
-> "JoinMessage()" などは "setJoinMessage" と同義です。
+> 模範解答中の "JoinMessage()" などは "setJoinMessage()" と同義です。
+
+## Componentってなに！？
+
+Paperのプラグインは基本的に "setJoinMessage()" などのSpigotではおなじみのメソッドが　[非推奨](https://wa3.i-3-i.info/word11214.html) になり、Paper専用のメソッドが用意されています。
+
+またそれらのメソッドが求める引数は全て `Component` という型を要求してきます。そのためいつものように `string` を入れるとIDEAがキレてきます。
+
+`Component` を `net.kyori.adventure.text.Component` を使用します。
+
+### 誤答
+
+```java
+public class PlayerJoin implements Listener {
+
+    @EventHandler
+    public void onJoin(PlayerJoinEvent e) {
+        // joinMessage() は setJoinMessage() ではないのでこれはエラーになる
+        e.joinMessage("がサーバーに参加しました");
+    }
+    
+}
+```
+
+### 正答
+
+```java
+public class PlayerJoin implements Listener {
+
+    @EventHandler
+    public void onJoin(PlayerJoinEvent e) {
+        // 本来stringをいれるところにComponent.text()を使う
+        e.joinMessage(Component.text(e.getPlayer().getName() + "がサーバーに参加しました"));
+    }
+    
+}
+```
+
+詳しくは [Kyoriのドキュメント](https://docs.adventure.kyori.net/) を参照します。

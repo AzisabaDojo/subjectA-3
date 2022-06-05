@@ -7,6 +7,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerGameModeChangeEvent;
 
+/**
+ * ここではプレイヤーがゲームモードが変わったらサーバーにいる全プレイヤーに通知するクソ迷惑な機能を実装します。
+ */
 public class GamemodeChange implements Listener {
 
     @EventHandler
