@@ -1,0 +1,5 @@
+name: SubjectA-3
+version: '${version}'
+main: com.github.meru.subjecta3.SubjectA3
+api-version: 1.18
+website: https://github.com/AzisabaDojo/subjectA-3
