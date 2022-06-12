@@ -23,8 +23,6 @@ Paperのプラグインは基本的に "setJoinMessage()" などのSpigotでは�
 
 またそれらのメソッドが求める引数は全て `Component` という型を要求してきます。そのためいつものように `string` を入れるとIDEAがキレてきます。
 
-`Component` を `net.kyori.adventure.text.Component` を使用します。
-
 ### 誤答
 
 ```java
@@ -53,4 +51,4 @@ public class PlayerJoin implements Listener {
 }
 ```
 
-詳しくは [Kyoriのドキュメント](https://docs.adventure.kyori.net/) を参照します。
+詳しくは [Kyoriのドキュメント](https://docs.adventure.kyori.net/) を参照してください。
