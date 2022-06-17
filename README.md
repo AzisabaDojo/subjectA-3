@@ -17,14 +17,6 @@
 > Paperのプラグインは基本的に "setJoinMessage()" などのSpigotではおなじみのメソッドが非推奨になり、Paper専用のメソッドが用意されています。
 > 模範解答中の "JoinMessage()" などは "setJoinMessage()" と同義です。
 
-## Componentってなに！？
-
-Paperのプラグインは基本的に "setJoinMessage()" などのSpigotではおなじみのメソッドが　[非推奨](https://wa3.i-3-i.info/word11214.html) になり、Paper専用のメソッドが用意されています。
-
-またそれらのメソッドが求める引数は全て `Component` という型を要求してきます。そのためいつものように `string` を入れるとIDEAがキレてきます。
-
-### 誤答
-
 ```java
 public class PlayerJoin implements Listener {
 
@@ -37,8 +29,6 @@ public class PlayerJoin implements Listener {
 }
 ```
 
-### 正答
-
 ```java
 public class PlayerJoin implements Listener {
 
@@ -50,5 +40,3 @@ public class PlayerJoin implements Listener {
     
 }
 ```
-
-詳しくは [Kyoriのドキュメント](https://docs.adventure.kyori.net/) を参照してください。
