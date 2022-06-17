@@ -13,10 +13,10 @@
 ・プレイヤーが村人や行商人と交易したらそのことをサーバー全体に通知する機能
 ```
 
-> 注意:
+> **Warning**
+> 
 > Paperのプラグインは基本的に "setJoinMessage()" などのSpigotではおなじみのメソッドが非推奨になり、Paper専用のメソッドが用意されています。
 > 模範解答中の "JoinMessage()" などは "setJoinMessage()" と同義です。
-
 ```java
 public class PlayerJoin implements Listener {
 
